@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/ClientDashboard.css';
 
-// CORREGIDO: Se añade onConfirmPurchase a los parámetros del componente
 function ClientDashboard({ user, onLogout, products, onConfirmPurchase }) {
   const [cart, setCart] = useState([]);
   const [plantType, setPlantType] = useState('Interior');
@@ -9,10 +8,9 @@ function ClientDashboard({ user, onLogout, products, onConfirmPurchase }) {
   const [riegoConsejo, setRiegoConsejo] = useState('💡 Selecciona un tipo de planta para ver la recomendación.');
   const [selectedCategory, setSelectedCategory] = useState('Todos');
 
-  // CONTROL DE NAVEGACIÓN SPA: 'inicio', 'catalogo', 'perfil'
   const [currentSection, setCurrentSection] = useState('inicio');
 
-  // CONTROL DE PERFIL Y REGISTRO DE COMPRAS
+
   const [clientName, setClientName] = useState('Cliente');
   const [inputName, setInputName] = useState(clientName);
   const [purchaseHistory, setPurchaseHistory] = useState([
@@ -46,7 +44,6 @@ function ClientDashboard({ user, onLogout, products, onConfirmPurchase }) {
       total: totalCarrito
     };
 
-    // CORREGIDO: Ejecuta la función de App.jsx para descontar stock real
     if (onConfirmPurchase) {
       onConfirmPurchase(cart);
     }

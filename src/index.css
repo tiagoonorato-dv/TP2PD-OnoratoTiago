@@ -1,0 +1,15 @@
+/* Estilos globales para estirar la app a pantalla completa */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8fafc; /* El mismo fondo claro del diseño */
+  font-family: "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
